@@ -1,8 +1,8 @@
 import Title from "@/components/Title";
-import Products from "../components/Products";
+import Products from "@/components/Products";
 
 const getData = async() => {
-  const res = await fetch("https://dummyjson.com/products")
+  const res = await fetch("https://dummyjson.com/products/category/smartphones")
   if (!res.ok) {
     throw new Error("Failed to fecth data");
   }
@@ -14,7 +14,7 @@ export default async function Home() {
   
   return (
     <main>
-      <Title title="All Product"/>
+      <Title title="Product Smartphone"/>
       <Products products={products}/>
     </main>
   )
